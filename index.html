@@ -36,6 +36,29 @@
                 <input type="text" placeholder="Rechercher un produit..." class="search-input">
             </div>
 
+            <div class="language-selector">
+  <button class="lang-btn" id="langBtn">
+    🇫🇷 FR ▾
+  </button>
+
+  <div class="lang-dropdown" id="langDropdown">
+    <input
+      type="text"
+      placeholder="Rechercher une langue..."
+      class="lang-search"
+      id="langSearch"
+    />
+
+    <div class="lang-options">
+      <button class="lang-option" data-lang="FR">🇫🇷 Français</button>
+      <button class="lang-option" data-lang="EN">🇬🇧 English</button>
+      <button class="lang-option" data-lang="ES">🇪🇸 Español</button>
+      <button class="lang-option" data-lang="DE">🇩🇪 Deutsch</button>
+      <button class="lang-option" data-lang="IT">🇮🇹 Italiano</button>
+    </div>
+  </div>
+</div>
+
             <div class="user-actions">
                 <button class="btn-login">Connexion</button>
                 <button class="btn-post">+ Poster</button>
@@ -482,5 +505,46 @@ document.querySelectorAll('.favorite-btn').forEach(btn => {
 // charger les favoris au démarrage
 window.addEventListener('DOMContentLoaded', loadFavorites);
 </script>
+
+<script>
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
+const langOptions = document.querySelectorAll('.lang-option');
+const langSearch = document.getElementById('langSearch');
+
+// ouvrir / fermer le menu
+langBtn.addEventListener('click', () => {
+  langDropdown.classList.toggle('active');
+});
+
+// fermer si clic en dehors
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.language-selector')) {
+    langDropdown.classList.remove('active');
+  }
+});
+
+// changer la langue sélectionnée
+langOptions.forEach(option => {
+  option.addEventListener('click', () => {
+    langBtn.innerHTML = option.innerHTML + ' ▾';
+    langDropdown.classList.remove('active');
+
+    // ici plus tard : changer la langue du site
+    console.log('Langue choisie:', option.dataset.lang);
+  });
+});
+
+// barre de recherche
+langSearch.addEventListener('input', () => {
+  const value = langSearch.value.toLowerCase();
+  langOptions.forEach(option => {
+    option.style.display = option.textContent.toLowerCase().includes(value)
+      ? 'block'
+      : 'none';
+  });
+});
+</script>
 </body>
+
 </html>

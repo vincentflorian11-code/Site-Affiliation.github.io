@@ -561,3 +561,68 @@ body {
 .favorites-list .page-btn:hover {
   background-color: #b3d4ff;
 }
+
+.language-selector {
+  position: relative;
+}
+
+.lang-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 220px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  padding: 10px;
+  display: none;
+  z-index: 2000;
+}
+
+.lang-dropdown.active {
+  display: block;
+}
+
+.lang-search {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 13px;
+}
+
+.lang-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.lang-option {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.lang-option:hover {
+  background-color: #f1f1f1;
+}

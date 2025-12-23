@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Choixy-Accueil</title>
+    <link rel="icon" type="image/png" href="Choixy-flavicon.png">
+    <link rel="stylesheet" href="Connexion.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <a href="index.html">
+                <img src="Choixy.png" alt="Logo Choixy" style="width: 50px; height: auto;">
+            </a>
+
+
+            <nav class="main-nav">
+                <a href="#">Bons plans</a>
+                <a href="#">Codes promo</a>
+                <a href="#">Gratuit</a>
+                <a href="#">Discussions</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Menu ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#">High-Tech</a>
+                        <a href="#">Gaming</a>
+                        <a href="#">Maison</a>
+                        <a href="#">Lifestyle</a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Rechercher un produit..." class="search-input">
+            </div>
+
+            <div class="user-actions">
+                <button class="btn-login">Connexion</button>
+                <button class="btn-post">+ Poster</button>
+            </div>
+        </div>
+
+        <div class="sub-categories-wrapper">
+
+  <div class="sub-categories">
+    <a href="#">High-Tech</a>
+    <a href="#">Consoles & Jeux vidéo</a>
+    <a href="#">Épicerie & Courses</a>
+    <a href="#">Mode & Accessoires</a>
+    <a href="#">Santé & Cosmétiques</a>
+    <a href="#">Famille & Enfants</a>
+    <a href="#">Maison & Habitat</a>
+  </div>
+
+  <div class="white-bar"></div>
+
+  <div class="below-text">
+    Découvrez les meilleures offres du moment.
+  </div>
+
+</div>
+
+<div class="filters-bar">
+
+  <div class="filters-left">
+    <span class="filter-tab active">À la une</span>
+    <span class="filter-tab">Hot</span>
+    <span class="filter-tab">Nouveaux</span>
+    <span class="filter-tab">Commentés</span>
+  </div>
+
+  <div class="filters-right">
+    <span class="filter-tab filter-main">Filtrer ⚙️</span>
+  </div>
+
+</div>
+
+    </header>
+
+    <div class="main-content">
+  <div class="left-content">
+    <div class="slider">
+  <div class="slides">
+    <div class="slide"><img src="Choixy.png" alt="Image 1"></div>
+    <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+  </div>
+
+  <button class="arrow left">&#10094;</button>
+  <button class="arrow right">&#10095;</button>
+
+  <div class="dots"></div> <!-- container vide pour générer les dots -->
+</div>
+
+<div class="cards-section">
+<div class="card" data-id="prod1">
+  <img src="Choixy.png" alt="Produit 1">
+  <div class="card-content">
+    <h3>Produit 1</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod2">
+    <img src="Choixy.png" alt="Produit 2">
+    <h3>Produit 2</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+        <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+        <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+</div>
+
+  <div class="card" data-id="prod3">
+  <img src="Choixy.png" alt="Produit 3">
+  <div class="card-content">
+    <h3>Produit 3</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="cards-section">
+  <div class="card" data-id="prod4">
+  <img src="Choixy.png" alt="Produit 4">
+  <div class="card-content">
+    <h3>Produit 4</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod5">
+  <img src="Choixy.png" alt="Produit 5">
+  <div class="card-content">
+    <h3>Produit 5</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod6">
+  <img src="Choixy.png" alt="Produit 6">
+  <div class="card-content">
+    <h3>Produit 6</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="cards-section">
+<div class="card" data-id="prod7">
+  <img src="Choixy.png" alt="Produit 7">
+  <div class="card-content">
+    <h3>Produit 7</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod8">
+    <img src="Choixy.png" alt="Produit 8">
+    <h3>Produit 8</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+        <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+        <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+</div>
+
+  <div class="card" data-id="prod9">
+  <img src="Choixy.png" alt="Produit 9">
+  <div class="card-content">
+    <h3>Produit 9</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="cards-section">
+<div class="card" data-id="prod10">
+  <img src="Choixy.png" alt="Produit 10">
+  <div class="card-content">
+    <h3>Produit 10</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod11">
+    <img src="Choixy.png" alt="Produit 11">
+    <h3>Produit 11</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+        <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+        <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+</div>
+
+  <div class="card" data-id="prod12">
+  <img src="Choixy.png" alt="Produit 12">
+  <div class="card-content">
+    <h3>Produit 12</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="cards-section">
+<div class="card" data-id="prod13">
+  <img src="Choixy.png" alt="Produit 13">
+  <div class="card-content">
+    <h3>Produit 13</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+
+  <div class="card" data-id="prod14">
+    <img src="Choixy.png" alt="Produit 14">
+    <h3>Produit 14</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+        <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+        <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+</div>
+
+  <div class="card" data-id="prod15">
+  <img src="Choixy.png" alt="Produit 15">
+  <div class="card-content">
+    <h3>Produit 15</h3>
+    <p>Description rapide</p>
+    <div class="card-actions">
+      <a href="https://www.example.com" target="_blank" class="buy-btn">Voir le produit</a>
+      <button class="favorite-btn" title="Ajouter aux favoris"><span>★</span></button>
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+
+  <div class="right-container">
+    <h3>Favoris</h3>
+    <div class="favorites-list">
+  <!-- Cartes favorites ici -->
+  <div class="pagination">
+  </div>
+</div>
+  </div>
+</div>
+
+    <script>
+const slides = document.querySelectorAll('.slide');
+const slidesContainer = document.querySelector('.slides');
+const dotsContainer = document.querySelector('.dots');
+const slideCount = slides.length;
+let currentIndex = 0;
+
+// créer dynamiquement les dots
+for (let i = 0; i < slideCount; i++) {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => {
+    showSlide(i);
+    resetTimer();
+  });
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+  currentIndex = index;
+  updateDots();
+}
+
+function updateDots() {
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
+}
+
+// flèches
+document.querySelector('.arrow.right').addEventListener('click', () => {
+  showSlide((currentIndex + 1) % slideCount);
+  resetTimer();
+});
+
+document.querySelector('.arrow.left').addEventListener('click', () => {
+  showSlide((currentIndex - 1 + slideCount) % slideCount);
+  resetTimer();
+});
+
+// rotation automatique
+const autoSlideInterval = 10000;
+let timer = setInterval(() => {
+  showSlide((currentIndex + 1) % slideCount);
+}, autoSlideInterval);
+
+function resetTimer() {
+  clearInterval(timer);
+  timer = setInterval(() => {
+    showSlide((currentIndex + 1) % slideCount);
+  }, autoSlideInterval);
+}
+    </script>
+
+    <script>
+        const tabs = document.querySelectorAll('.filters-left .filter-tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelector('.filter-tab.active')?.classList.remove('active');
+    tab.classList.add('active');
+  });
+});
+    </script>
+
+    <script>
+const favoritesList = document.querySelector('.favorites-list');
+const cardsPerPage = 5;
+let currentPage = 1;
+let favoriteCards = []; // toutes les cartes clonées
+
+// sauvegarder les favoris dans le localStorage
+function saveFavorites() {
+  const favorites = favoriteCards.map(c => c.dataset.id);
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+
+// charger les favoris au démarrage
+function loadFavorites() {
+  const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  storedFavorites.forEach(id => {
+    const originalCard = document.querySelector(`.card[data-id="${id}"]`);
+    if (originalCard) addCardToFavorites(originalCard);
+  });
+}
+
+// ajouter une carte aux favoris
+function addCardToFavorites(card) {
+  // vérifier si déjà présent
+  if (favoriteCards.find(c => c.dataset.id === card.dataset.id)) return;
+
+  const cardClone = document.createElement('div');
+  cardClone.classList.add('card');
+  cardClone.setAttribute('data-id', card.dataset.id);
+
+  cardClone.innerHTML = `
+    <img src="${card.querySelector('img').src}" alt="${card.querySelector('img').alt}">
+    <div class="card-content">
+      <h3>${card.querySelector('h3').textContent}</h3>
+      <p>${card.querySelector('p').textContent}</p>
+      <div class="card-actions">
+        <a href="${card.querySelector('.buy-btn').href}" target="_blank" class="buy-btn">Voir le produit</a>
+        <button class="delete-btn">Supprimer</button>
+      </div>
+    </div>
+  `;
+
+  // bouton supprimer
+  cardClone.querySelector('.delete-btn').addEventListener('click', () => {
+    favoriteCards = favoriteCards.filter(c => c.dataset.id !== card.dataset.id);
+    const starBtn = card.querySelector('.favorite-btn');
+    if (starBtn) starBtn.classList.remove('active'); // réinitialiser l’étoile
+    if ((currentPage - 1) * cardsPerPage >= favoriteCards.length && currentPage > 1) currentPage--; // revenir page précédente si nécessaire
+    updateFavorites();
+    saveFavorites();
+  });
+
+  // activer l’étoile du produit original
+  const starBtn = card.querySelector('.favorite-btn');
+  if (starBtn) starBtn.classList.add('active');
+
+  favoriteCards.push(cardClone);
+  updateFavorites();
+  saveFavorites();
+}
+
+// mise à jour de l’affichage avec pagination
+function updateFavorites() {
+  // vider le container sauf la pagination
+  const paginationContainer = favoritesList.querySelector('.pagination') || document.createElement('div');
+  paginationContainer.classList.add('pagination');
+  favoritesList.innerHTML = '';
+  favoritesList.appendChild(paginationContainer);
+
+  const totalPages = Math.ceil(favoriteCards.length / cardsPerPage);
+  if (currentPage > totalPages) currentPage = totalPages || 1;
+
+  const start = (currentPage - 1) * cardsPerPage;
+  const end = start + cardsPerPage;
+  favoriteCards.slice(start, end).forEach(c => favoritesList.insertBefore(c, paginationContainer));
+
+  // générer pagination
+  paginationContainer.innerHTML = '';
+  if (totalPages <= 1) return;
+
+  const prevBtn = document.createElement('button');
+  prevBtn.textContent = '<';
+  prevBtn.classList.add('page-btn');
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.addEventListener('click', () => { currentPage--; updateFavorites(); });
+  paginationContainer.appendChild(prevBtn);
+
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement('button');
+    pageBtn.textContent = i;
+    pageBtn.classList.add('page-btn');
+    if (i === currentPage) pageBtn.classList.add('active');
+    pageBtn.addEventListener('click', () => { currentPage = i; updateFavorites(); });
+    paginationContainer.appendChild(pageBtn);
+  }
+
+  const nextBtn = document.createElement('button');
+  nextBtn.textContent = '>';
+  nextBtn.classList.add('page-btn');
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.addEventListener('click', () => { currentPage++; updateFavorites(); });
+  paginationContainer.appendChild(nextBtn);
+}
+
+// gérer le clic sur les étoiles
+document.querySelectorAll('.favorite-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.card');
+    if (!btn.classList.contains('active')) {
+      addCardToFavorites(card);
+    } else {
+      const cardId = card.dataset.id;
+      favoriteCards = favoriteCards.filter(c => c.dataset.id !== cardId);
+      btn.classList.remove('active');
+      updateFavorites();
+      saveFavorites();
+    }
+  });
+});
+
+// charger les favoris au démarrage
+window.addEventListener('DOMContentLoaded', loadFavorites);
+</script>
+</body>
+</html>

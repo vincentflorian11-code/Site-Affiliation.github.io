@@ -49,14 +49,31 @@
       id="langSearch"
     />
 
-    <div class="lang-options">
-      <button class="lang-option" data-lang="FR">🇫🇷 Français</button>
-      <button class="lang-option" data-lang="EN">🇬🇧 English</button>
-      <button class="lang-option" data-lang="ES">🇪🇸 Español</button>
-      <button class="lang-option" data-lang="DE">🇩🇪 Deutsch</button>
-      <button class="lang-option" data-lang="IT">🇮🇹 Italiano</button>
-    </div>
-  </div>
+    <button class="lang-btn" id="langBtn">
+  <img src="flags/fr.png" class="flag"> FR ▾
+</button>
+
+<div class="lang-dropdown" id="langDropdown">
+  <input type="text" placeholder="Rechercher..." class="lang-search" id="langSearch">
+
+  <button class="lang-option" data-lang="fr">
+    <img src="flags/fr.png" class="flag"> Français
+  </button>
+  <button class="lang-option" data-lang="en">
+    <img src="flags/gb.png" class="flag"> English
+  </button>
+  <button class="lang-option" data-lang="es">
+    <img src="flags/es.png" class="flag"> Español
+  </button>
+</div>
+
+<a data-i18n="deals">Bons plans</a>
+<a data-i18n="codes">Codes promo</a>
+<button class="btn-login" data-i18n="login">Connexion</button>
+<button class="btn-post" data-i18n="post">+ Poster</button>
+
+<div class="below-text" data-i18n="subtitle">
+  Découvrez les meilleures offres du moment.
 </div>
 
             <div class="user-actions">
@@ -545,6 +562,68 @@ langSearch.addEventListener('input', () => {
   });
 });
 </script>
+
+<script>
+const translations = {
+  fr: {
+    deals: "Bons plans",
+    codes: "Codes promo",
+    login: "Connexion",
+    post: "+ Poster",
+    subtitle: "Découvrez les meilleures offres du moment."
+  },
+  en: {
+    deals: "Deals",
+    codes: "Promo codes",
+    login: "Login",
+    post: "+ Post",
+    subtitle: "Discover the best deals right now."
+  },
+  es: {
+    deals: "Ofertas",
+    codes: "Códigos promo",
+    login: "Iniciar sesión",
+    post: "+ Publicar",
+    subtitle: "Descubre las mejores ofertas del momento."
+  }
+};
+</script>
+
+<script>
+function setLanguage(lang) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  localStorage.setItem("lang", lang);
+}
+</script>
+
+<script>
+document.querySelectorAll('.lang-option').forEach(option => {
+  option.addEventListener('click', () => {
+    const lang = option.dataset.lang;
+
+    // changer le texte du bouton principal
+    document.getElementById('langBtn').innerHTML =
+      option.innerHTML + " ▾";
+
+    setLanguage(lang);
+    document.getElementById('langDropdown').classList.remove('active');
+  });
+});
+
+// langue sauvegardée
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem("lang") || "fr";
+  setLanguage(savedLang);
+});
+</script>
+
 </body>
 
 </html>
+

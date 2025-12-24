@@ -626,3 +626,10 @@ body {
 .lang-option:hover {
   background-color: #f1f1f1;
 }
+
+.flag {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 3px;
+}

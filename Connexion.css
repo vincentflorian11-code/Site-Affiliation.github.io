@@ -1,0 +1,566 @@
+/* Reset général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header full width */
+.header {
+  width: 100%; /* largeur de la fenêtre */
+  background-color: #1c1c1c;
+}
+
+/* Ligne principale */
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  max-width: 1400px;   /* largeur max confortable */
+  margin: 0 auto;     /* centrage horizontal */
+  padding: 10px 16px; /* padding fixe (évite les gros espaces) */
+}
+
+
+/* Logo */
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Menu principal */
+.main-nav {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background-color: #2563eb;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  min-width: 150px;
+  border-radius: 4px;
+  top: 35px;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Barre de recherche */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  flex: 1;              /* prend l’espace disponible */
+  min-width: 150px;
+  max-width: 400px;
+}
+
+.search-icon {
+  margin-right: 8px;
+  color: #999;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Boutons utilisateur */
+.user-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.user-actions button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-login {
+  background-color: #333;
+  color: white;
+}
+
+.btn-post {
+  background-color: #2563eb;
+  color: white;
+}
+
+.user-actions button:hover {
+  opacity: 0.8;
+}
+
+.sub-categories {
+  display: flex;
+  gap: 10px;
+  padding: 8px 2%;
+  background-color: #2a2a2a;
+  overflow-x: auto;
+}
+
+.sub-categories a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #333;
+  border-radius: 4px;
+  font-size: 14px;
+  
+  flex: 1;          /* prend toute la largeur disponible */
+  text-align: center;
+  white-space: normal; /* permet au texte de passer à la ligne si nécessaire */
+}
+
+
+.sub-categories a:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .main-nav {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  
+  .user-actions {
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 1000px;    /* largeur du slider */
+  height: 150px;   /* hauteur du slider */
+  margin: 0px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;           /* met les slides en ligne */
+  transition: transform 0.5s ease-in-out;
+  width: 100%;             /* largeur totale du container */
+}
+
+.slide {
+  min-width: 100%;         /* chaque slide prend toute la largeur visible */
+  height: 150px;           /* hauteur du slider */
+  flex-shrink: 0;          /* empêche le slide de rétrécir */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* toute l'image est visible */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.slider {
+  background-color: #ffffff; /* fond blanc ou autre couleur de ton choix */
+  width: 100%;
+  height: 150px; /* ou hauteur souhaitée */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* optionnel */
+}
+
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(200, 200, 200, 0.5); /* gris transparent */
+  border-radius: 50%;
+  transition: 
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active {
+  transform: scale(1.4); /* plus gros */
+  background-color: rgba(72, 70, 70, 0.9); /* plus visible */
+}
+
+.sub-categories-wrapper {
+  background-color: #2a2a2a; /* même gris que ta barre */
+  padding-bottom: 15px;
+}
+
+.white-bar {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(95, 93, 93);
+  margin: 10px 0;
+}
+
+.below-text {
+  height: 14px;              /* hauteur explicite */
+  display: flex;
+  align-items: center;       /* centrage vertical */
+  justify-content: center;   /* centrage horizontal */
+  font-size: 14px;
+  color: #ddd;
+}
+
+.filters-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 12px 2%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters-left,
+.filters-right {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-tab {
+  position: relative;
+  font-size: 14px;
+  color: #666;          /* texte gris par défaut */
+  cursor: pointer;
+  padding-bottom: 6px;  /* espace pour la barre */
+  transition: color 0.2s ease;
+}
+
+.filter-tab:hover {
+  color: #7fbfff;       /* bleu clair au survol */
+}
+
+/* barre en dessous (soulignement actif) */
+.filter-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;          /* épaisseur de la barre */
+  background-color: #7fbfff; /* bleu clair */
+  border-radius: 2px;    /* coins légèrement arrondis */
+  transition: width 0.25s ease;
+}
+
+/* actif */
+.filter-tab.active {
+  color: #7fbfff;
+}
+
+.filter-tab.active::after {
+  width: 100%;           /* barre pleine sous le texte */
+}
+
+/* bouton filtre à droite */
+.filter-main {
+  color: #333;
+  font-weight: 500;
+}
+
+body {
+  background-color: #cbc8c8; /* couleur de fond principale du site */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* empêche le scroll horizontal */
+}
+
+.main-content {
+  display: flex;
+  justify-content: flex-start;
+  gap:15px; /* espace réduit entre les deux containers */
+  padding: 20px;
+}
+
+/* contenu principal */
+.left-content {
+  flex: 1; 
+  margin: 0;   /* enlever marges éventuelles */
+}
+
+/* container droit */
+.right-container {
+  width: 400px; /* largeur fixe */
+  height: 70vh; /* prend toute la hauteur de la fenêtre */
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: sticky; /* reste visible lors du scroll */
+  top: 0;           /* colle le haut de la fenêtre */
+  margin: 0;
+  overflow-y: auto; /* scroll interne si le contenu dépasse */
+}
+
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;       /* passe à la ligne sur petits écrans */
+  gap: 40px;             /* espace entre les cartes */
+  padding: 20px 2%;      /* padding autour de la section */
+  justify-content: flex-start;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 10px;
+  flex: 1 1 calc(25% - 20px); /* 4 cartes par ligne avec gap */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #2563eb;  /* bleu */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: #1e4bb8; /* un peu plus foncé au survol */
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.favorites-list .card {
+  display: flex;               /* image à gauche, contenu à droite */
+  flex-direction: row;
+  margin-bottom: 10px;
+  height: 105px;
+  gap: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;         /* centre verticalement la carte */
+}
+
+.favorites-list .card img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.favorites-list .card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;      /* colonne verticale */
+  justify-content: space-between; /* titre en haut, boutons en bas */
+}
+
+.favorites-list .card-content h3 {
+  font-size: 14px;
+  margin: 0;
+}
+
+.favorites-list .card-content p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.favorite-btn {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.favorite-btn span {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.favorite-btn.active span,
+.favorite-btn:hover span {
+  color: #ffcc00;
+}
+
+.delete-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 10px;
+  background-color: #ff0000;  /* rouge */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.favorites-list .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.favorites-list .page-btn {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.favorites-list .page-btn.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.favorites-list .page-btn:hover {
+  background-color: #b3d4ff;
+}
